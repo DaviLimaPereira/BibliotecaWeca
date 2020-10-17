@@ -22,13 +22,31 @@ class Main{
         //MOSTRAR O CONCEITO IDENTIFICADO
         System.out.println("Conceito: " + conceito);
     }
+
     public static double obterEuclidiana(int[] conhecido, int[] desconhecido){
         //FORMULA DISTANCIA EUCLIDIANA
-        
-        return 0.0;
+        double distancia = 0;
+        for (int i = 0; i < conhecido.length - 1; i++){
+            distancia += Math.pow(conhecido[i] - desconhecido[i], 2);
+        }
+        return Math.sqrt(distancia);
     }
 
-    public static int vizinhoMaisProximo(int[][] conhecido, int[] desconhecido){
-        return 0;
+    public static int vizinhoMaisProximo(int[][] conhecimento, int[] desconhecido){
+        // OBTER A DISTANCIA DE TODOS OS EXEMPLOS CONHECIDOS EM RELAÇÃO AO EXEMPLO DESCONHECIDO
+        double menorDistancia = obterEuclidiana(conhecimento[0], desconhecido);
+        int maisProximo = 0;
+        for (int i = 1; i < conhecimento.length; i++){
+            double distancia = obterEuclidiana(conhecimento[i], desconhecido);
+
+            // IDENTIFICAR O EXEMPLO COM MENOR FREQUENCIA
+            if (distancia < menorDistancia){
+                menorDistancia = distancia;
+                maisProximo = i;
+            }
+        }
+
+        // RETORNA O CONCEITO (CLASSE) DO EXEMPLO MAIS PROXIMO
+        return conhecimento[maisProximo][3];
     }
 }
