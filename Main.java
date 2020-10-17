@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Main{
     public static void main(String[] args){
         //REPRESENTAR A BASE DE DADOS (CONJUNTO COM OS EXEMPLOS CONHECIDOS)
@@ -11,10 +13,10 @@ class Main{
             {8, 160, 41, 2},
             {10, 180, 38, 1},
             {6, 200, 45, 1}
-        }
+        };
 
         //REPRESENTAR O EXEMPLO DESCONHECIDO
-        int[] comic = {8, 290, 38, -1} //-1 = conceito indefinido
+        int[] comic = {8, 290, 38, -1}; //-1 = conceito indefinido
 
         // USAR O ALGORITMO "VIZINHO MAIS PROXIMO" PARA IDENTIFICAR O CONCEITO DESSE EXEMPLO
         int conceito = vizinhoMaisProximo(simpsons, comic);
@@ -47,6 +49,7 @@ class Main{
         }
 
         // RETORNA O CONCEITO (CLASSE) DO EXEMPLO MAIS PROXIMO
+        System.out.println("Exemplo mais proximo: " + Arrays.toString(conhecimento[maisProximo]));
         return conhecimento[maisProximo][3];
     }
 }
