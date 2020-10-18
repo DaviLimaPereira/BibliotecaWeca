@@ -4,17 +4,24 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "java",
-      "name": "Debug (Launch) - Current File",
-      "request": "launch",
-      "mainClass": "${file}"
+        "type": "java",
+        "name": "CodeLens (Launch) - main",
+        "request": "launch",
+        "mainClass": "main",
+        "projectName": "BibliotecaWeca_e020b79b"
     },
     {
-      "type": "java",
-      "name": "Debug (Launch)-Main<BibliotecaWeca_e020b79b>",
-      "request": "launch",
-      "mainClass": "Main",
-      "projectName": "BibliotecaWeca_e020b79b"
+        "type": "java",
+        "name": "Debug (Launch) - Current File",
+        "request": "launch",
+        "mainClass": "${file}"
+    },
+    {
+        "type": "java",
+        "name": "Debug (Launch)-Main<BibliotecaWeca_e020b79b>",
+        "request": "launch",
+        "mainClass": "Main",
+        "projectName": "BibliotecaWeca_e020b79b"
     }
-  ]
+]
 }

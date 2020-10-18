@@ -1,0 +1,7 @@
+{
+    "java.dependency.syncWithFolderExplorer": false,
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "weka-3-4-8/weka.jar"
+    ]
+}
